@@ -1,3 +1,13 @@
 #home {
   border-bottom: 1px solid #2a3d2f;
 }
+
+.corner-only {
+  --s: 12px;
+  border: 4px solid var(--color-link);
+  padding: 2px 7px;
+  mask: 
+    conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+    0 0/calc(100% - var(--s)) calc(100% - var(--s));
+}

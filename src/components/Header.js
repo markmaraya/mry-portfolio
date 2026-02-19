@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import throttle from "lodash.throttle";
+import Logo from "./ui/Logo.js"
 
 const sectionIds = ["home", "about", "tools", "projects", "contact"];
 
@@ -51,8 +52,8 @@ const Header = () => {
 
   return (
     <header className="shadow-md sticky top-0 z-50 h-20 bg-main">
-      <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 className="text-accent text-2xl font-bold">Puchi</h1>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <Logo />
         <nav className="space-x-4">
           {sectionIds.map((id) => (
             <a
