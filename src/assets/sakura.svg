@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky Gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fceae8"/>
+      <stop offset="100%" stop-color="#fddde6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyGradient)" />
+
+  <!-- Mountains -->
+  <path d="M0 400 L200 300 L400 420 L600 280 L800 400 L800 600 L0 600 Z" fill="#cbb4d4"/>
+  <path d="M0 450 L250 350 L500 470 L750 360 L800 450 L800 600 L0 600 Z" fill="#b3a1c2"/>
+
+  <!-- Ground -->
+  <rect y="500" width="800" height="100" fill="#f6cdd5" />
+
+  <!-- Sakura Trees -->
+  <g>
+    <!-- Tree 1 -->
+    <path d="M150 500 C140 480, 160 460, 150 440 C145 420, 155 400, 150 380" stroke="#5c3a2e" stroke-width="10" fill="none"/>
+    <circle cx="150" cy="380" r="30" fill="#f9a8c3"/>
+    <circle cx="130" cy="390" r="20" fill="#f9a8c3"/>
+    <circle cx="170" cy="390" r="20" fill="#f9a8c3"/>
+
+    <!-- Tree 2 -->
+    <path d="M650 500 C640 480, 660 460, 650 440 C645 420, 655 400, 650 380" stroke="#5c3a2e" stroke-width="10" fill="none"/>
+    <circle cx="650" cy="380" r="30" fill="#f9a8c3"/>
+    <circle cx="630" cy="390" r="20" fill="#f9a8c3"/>
+    <circle cx="670" cy="390" r="20" fill="#f9a8c3"/>
+  </g>
+</svg>

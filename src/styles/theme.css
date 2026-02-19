@@ -1,0 +1,18 @@
+:root {
+  --color-main: #1f2a1f;
+  --color-bg: #2a3d2f;
+  --color-text: #dde5b6;
+  --color-accent: #a3b18a;
+  --color-secondary: #588157;
+  --color-muted: #4a5f4a;
+  --color-link: #d4a373;
+  --color-link-hover: #e2c88f;
+}
+
+[data-theme="light"] {
+  --color-bg: #f5fbef;
+  --color-text: #2f3e2f;
+  --color-accent: #588157;
+  --color-secondary: #a3b18a;
+  --color-muted: #dde5b6;
+}
