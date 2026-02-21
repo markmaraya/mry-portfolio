@@ -1,6 +1,6 @@
-const Footer = () => {
+const Footer = ({ ...props }) => {
   return (
-    <>
+    <footer {...props}>
       <p className="text-accent">
         Designed & Built by{" "}
         <a
@@ -11,7 +11,7 @@ const Footer = () => {
         </a>
       </p>
       <p className="text-accent">&copy; 2025. All rights reserved.</p>
-    </>
+    </footer>
   );
 };
 

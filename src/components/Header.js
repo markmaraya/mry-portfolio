@@ -43,7 +43,7 @@ const Header = () => {
       }
     };
 
-    const throttledScroll = throttle(determineActiveSection, 300);
+    const throttledScroll = throttle(determineActiveSection, 100);
     app.addEventListener("scroll", throttledScroll);
     return () => {
       app.removeEventListener("scroll", throttledScroll);

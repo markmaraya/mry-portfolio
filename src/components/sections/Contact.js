@@ -1,6 +1,6 @@
-const Contact = () => {
+const Contact = ({ ...props }) => {
   return (
-    <>
+    <section {...props}>
       <h3 className="text-accent text-3xl font-semibold mb-6">Contact</h3>
       <p className="text-secondary mb-4">
         Feel free to reach out for collaborations or just a friendly hello!
@@ -11,7 +11,7 @@ const Contact = () => {
       >
         john@example.com
       </a>
-    </>
+    </section>
   );
 };
 
