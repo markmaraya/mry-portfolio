@@ -62,7 +62,7 @@ const Header = () => {
               className={`relative hover:text-linkHover transition-colors duration-300
                 ${
                   activeLink === id
-                    ? "pointer-events-none text-linkHover font-bold after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-linkHover after:rounded-full after:transition-all after:duration-300"
+                    ? "text-linkHover font-bold after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-linkHover after:rounded-full after:transition-all after:duration-300"
                     : "text-accent"
                 }`}
               onClick={(e) => handleNavClick(e, id)}

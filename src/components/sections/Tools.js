@@ -6,6 +6,7 @@ const skills = [
   { name: "TypeScript", icon: "logos:typescript-icon" },
   { name: "React", icon: "logos:react" },
   { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+  { name: "Material UI", icon: "logos:material-ui" },
   { name: "KnockoutJS", icon: "file-icons:knockout", color: "text-red-600" },
   { name: "jQuery", icon: "devicon:jquery" },
   { name: "HTML5", icon: "devicon:html5" },
@@ -27,9 +28,18 @@ const Tools = ({ ...props }) => {
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-center text-center">
-              <Icon icon={skill.icon} className={`text-6xl mb-1 ${skill.color}`} />
-              <h2 className="text-l font-semibold mb-2 cursor-default">{skill.name}</h2>
+            <div
+              key={index}
+              className="bg-accent shadow-md rounded-lg p-6 flex flex-col items-center justify-center text-center transition duration-300 transform 
+               hover:-translate-y-2 hover:bg-text hover:shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
+            >
+              <Icon
+                icon={skill.icon}
+                className={`text-6xl mb-1 ${skill.color}`}
+              />
+              <h2 className="text-main text-l font-semibold cursor-default">
+                {skill.name}
+              </h2>
             </div>
           ))}
         </div>
