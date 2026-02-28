@@ -9,7 +9,7 @@ const Contact = ({ ...props }) => {
         href="mailto:john@example.com"
         className="text-blue-600 hover:underline"
       >
-        john@example.com
+        mark@example.com
       </a>
     </section>
   );
