@@ -32,7 +32,7 @@ function App() {
 
       <About
         id="about"
-        className="relative bg-bg mx-auto flex justify-center items-center flex-col h-screen px-4"
+        className="relative bg-bg flex items-center flex-col px-4 pt-32"
         ref={sectionRef}
       />
 
