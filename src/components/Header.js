@@ -53,7 +53,7 @@ const Header = () => {
   return (
     <header className="shadow-md sticky top-0 z-50 h-20 bg-main">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Logo />
+        <Logo onClick={(e) => handleNavClick(e, "home")} />
         <nav className="space-x-4">
           {sectionIds.map((id) => (
             <a
