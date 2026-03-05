@@ -42,7 +42,7 @@ function App() {
 
       <Contact
         id="contact"
-        className="relative bg-bg mx-auto flex items-center flex-col h-screen px-4 pt-32"
+        className="relative bg-bg mx-auto flex flex-col h-screen px-4 pt-32"
       />
 
       <Footer className="bg-muted text-center py-6" />
