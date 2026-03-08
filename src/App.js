@@ -36,13 +36,13 @@ function App() {
         ref={sectionRef}
       />
 
-      <Tools id="tools" className="relative bg-bg h-screen pt-32" />
+      <Tools id="tools" className="relative bg-bg pt-32" />
 
       <Projects id="projects" className="relative bg-bg h-screen pt-32" />
 
       <Contact
         id="contact"
-        className="relative bg-bg mx-auto flex flex-col h-screen px-4 pt-32"
+        className="relative bg-bg mx-auto flex flex-col px-4 pt-32 pb-20 min-h-[600px]"
       />
 
       <Footer className="bg-muted text-center py-6" />

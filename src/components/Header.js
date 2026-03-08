@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
-import throttle from "lodash.throttle";
-import Logo from "./ui/Logo.js"
+import Logo from "./ui/Logo.js";
 
 const sectionIds = ["home", "about", "tools", "projects", "contact"];
 
@@ -21,32 +20,33 @@ const Header = () => {
     const app = document.querySelector(".App");
     if (!app) return;
 
-    const headerOffset = 80;
-
-    const determineActiveSection = () => {
-      const scrollPos = app.scrollTop;
-
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sectionIds[i]);
-
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionBottom = sectionTop + section.offsetHeight;
-          if (
-            scrollPos + headerOffset >= sectionTop &&
-            scrollPos + headerOffset < sectionBottom
-          ) {
-            setActiveLink(sectionIds[i]);
-            break;
-          }
-        }
-      }
+    const observerOptions = {
+      root: app,
+      rootMargin: "0px 0px -50% 0px",
+      threshold: 0.25,
     };
 
-    const throttledScroll = throttle(determineActiveSection, 100);
-    app.addEventListener("scroll", throttledScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+
+      const scrollPos = app.scrollTop;
+      const maxScroll = app.scrollHeight - app.clientHeight;
+      if (scrollPos >= maxScroll - 2) {
+        setActiveLink("contact");
+      }
+    }, observerOptions);
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
     return () => {
-      app.removeEventListener("scroll", throttledScroll);
+      observer.disconnect();
     };
   }, []);
 
