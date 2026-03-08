@@ -74,8 +74,7 @@ const ContactItem = ({ iconPlain, iconOriginal, label, link, hoverColor }) => {
         />
       </div>
       <span
-        className={`mt-1 text-lg font-medium text-accent transition duration-300 group-hover:text-[color:var(--hover-color)]`}
-        style={{ "--hover-color": hoverColor }}
+        className={`text-lg font-medium text-accent opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0`}
       >
         {label}
       </span>
