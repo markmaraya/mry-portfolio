@@ -16,6 +16,10 @@ module.exports = {
         link: 'var(--color-link)',
         linkHover: 'var(--color-link-hover)'
       },
+      fontFamily: {
+        hero: ['Darumadrop One', 'cursive'],
+        body: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
