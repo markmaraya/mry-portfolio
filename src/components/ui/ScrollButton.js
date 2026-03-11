@@ -12,7 +12,7 @@ const ScrollButton = ({ targetRef }) => {
   return (
     <div className="flex flex-col items-center space-y-2">
       <div class="inline-block bg-bg/60 px-3 py-2 rounded-md">
-        <label className="text-light text-lg drop-shadow-md">
+        <label className="text-text text-lg drop-shadow-md">
           Explore My Work
         </label>
       </div>
