@@ -1,12 +1,12 @@
 :root {
-  --color-main: #1f2a1f;
-  --color-bg: #2a3d2f;
-  --color-text: #dde5b6;
-  --color-accent: #a3b18a;
-  --color-secondary: #588157;
-  --color-muted: #4a5f4a;
-  --color-link: #d4a373;
-  --color-link-hover: #e2c88f;
+  --color-main: 31 42 31; /* #1f2a1f */
+  --color-bg: 42 61 47; /* #2a3d2f */
+  --color-text: 221 229 182; /* #dde5b6 */
+  --color-accent: 163 177 138; /* #a3b18a */
+  --color-secondary: 88 129 87; /* #588157 */
+  --color-muted: 74 95 74; /* #4a5f4a */
+  --color-link: 212 163 115; /* #d4a373 */
+  --color-link-hover: 226 200 143; /* #e2c88f */
 }
 
 [data-theme="light"] {
