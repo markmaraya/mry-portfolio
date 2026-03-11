@@ -7,6 +7,13 @@
   --color-muted: 74 95 74; /* #4a5f4a */
   --color-link: 212 163 115; /* #d4a373 */
   --color-link-hover: 226 200 143; /* #e2c88f */
+  --color-light: 245 245 235; /* #f5f5eb */
+  --color-dark: 20 28 20; /* #141c14 */
+  --color-highlight: 255 204 102; /* #ffcc66 */
+  --color-info: 102 153 204; /* #6699cc */
+  --color-success: 120 180 120; /* #78b478 */
+  --color-warning: 255 180 80; /* #ffb450 */
+  --color-error: 200 80 80; /* #c85050 */
 }
 
 [data-theme="light"] {
