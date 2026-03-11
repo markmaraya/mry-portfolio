@@ -26,7 +26,7 @@ function App() {
 
       <Home
         id="home"
-        className="relative text-white flex justify-center items-center flex-col h-screen -mt-16"
+        className="relative flex items-center flex-col h-screen -mt-16 text-white"
         sectionRef={sectionRef}
       />
 
