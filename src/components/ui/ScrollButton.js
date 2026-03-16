@@ -23,7 +23,7 @@ const ScrollButton = ({ targetRef }) => {
         height="24"
         viewBox="29 47 42 40"
         xmlns="http://www.w3.org/2000/svg"
-        className="pointer-events-none -mt-1 text-text transform duration-300 ease-out transition-opacity peer-hover:opacity-0 animate-bounce"
+        className="pointer-events-none -mt-1 text-text transition-opacity duration-300 ease-out peer-hover:opacity-0 animate-bounce"
       >
         <polygon points="50,50 55,55 50,60 45,55" fill="currentColor" />
         <polyline
