@@ -21,7 +21,7 @@ module.exports = {
         error: "rgb(var(--color-error) / <alpha-value>)",
       },
       fontFamily: {
-        hero: ['BushcraftDistress', 'sans-serif'],
+        hero: ["BushcraftTextured", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
     },

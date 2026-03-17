@@ -6,9 +6,10 @@
 @import "./custom.css";
 
 @font-face {
-  font-family: 'BushcraftDistress';
-  src: url('../assets/fonts/Bushcraft-distress.woff2') format('woff2'),
-       url('../assets/fonts/Bushcraft-distress.woff') format('woff');
+  font-family: "BushcraftTextured";
+  src:
+    url("../assets/fonts/Bushcraft-textured.woff2") format("woff2"),
+    url("../assets/fonts/Bushcraft-textured.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
