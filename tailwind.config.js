@@ -21,7 +21,7 @@ module.exports = {
         error: "rgb(var(--color-error) / <alpha-value>)",
       },
       fontFamily: {
-        hero: ["Darumadrop One", "cursive"],
+        hero: ['BushcraftDistress', 'sans-serif'],
         body: ["Inter", "sans-serif"],
       },
     },

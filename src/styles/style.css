@@ -5,6 +5,15 @@
 @import "./theme.css";
 @import "./custom.css";
 
+@font-face {
+  font-family: 'BushcraftDistress';
+  src: url('../assets/fonts/Bushcraft-distress.woff2') format('woff2'),
+       url('../assets/fonts/Bushcraft-distress.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari, and Opera */
   .scrollbar-hide::-webkit-scrollbar {
