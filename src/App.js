@@ -30,11 +30,7 @@ function App() {
         sectionRef={sectionRef}
       />
 
-      <About
-        id="about"
-        className="relative bg-bg flex items-center flex-col px-4 pt-32"
-        ref={sectionRef}
-      />
+      <About id="about" ref={sectionRef} />
 
       <Tools id="tools" className="relative bg-bg pt-32" />
 
