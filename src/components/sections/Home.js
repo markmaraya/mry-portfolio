@@ -1,4 +1,4 @@
-import ScrollButton from "../ui/ScrollButton.js";
+import ScrollButton from "../ui/ScrollButton";
 
 const Home = ({ sectionRef, ...props }) => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
-import Logo from "./ui/Logo.js";
+import Logo from "./ui/Logo";
 
 const sectionIds = ["home", "about", "tools", "projects", "contact"];
 
