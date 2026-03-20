@@ -32,7 +32,7 @@ function App() {
 
       <About id="about" ref={sectionRef} />
 
-      <Tools id="tools" className="relative bg-bg pt-32" />
+      <Tools id="tools" />
 
       <Projects id="projects" className="relative bg-bg h-screen pt-32" />
 
