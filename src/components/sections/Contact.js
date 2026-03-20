@@ -34,7 +34,7 @@ const contacts = [
 const Contact = ({ ...props }) => {
   return (
     <section {...props}>
-      <h3 className="text-accent text-3xl text-center font-semibold">
+      <h3 className="text-accent text-5xl text-center font-hero">
         Contact
       </h3>
       <div className="flex flex-1 flex-wrap items-center justify-center gap-16 max-w-5xl mx-auto">

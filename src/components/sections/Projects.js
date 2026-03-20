@@ -2,7 +2,7 @@ const Projects = ({ ...props }) => {
   return (
     <section {...props}>
       <div className="max-w-6xl mx-auto px-4">
-        <h3 className="text-accent text-3xl font-semibold mb-10 text-center">
+        <h3 className="text-accent text-5xl text-center font-hero mb-10">
           Projects
         </h3>
         <div className="grid md:grid-cols-3 gap-8">

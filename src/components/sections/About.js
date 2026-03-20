@@ -1,7 +1,7 @@
 const About = ({ ...props }) => {
   return (
     <section {...props}>
-      <h3 className="text-accent text-3xl font-semibold mb-6">About</h3>
+      <h3 className="text-accent text-5xl font-hero mb-6">About</h3>
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 text-left text-text p-10">
         <div className="flex items-center justify-center"></div>
         <div>
