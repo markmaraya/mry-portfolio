@@ -17,10 +17,7 @@ const skills = [
 
 const Tools = ({ id = "tools" }) => {
   return (
-    <section
-      id={id}
-      className="min-h-screen bg-bg pt-32"
-    >
+    <section id={id} className="min-h-screen bg-bg pt-32">
       <div className="max-w-6xl mx-auto px-4">
         <h3 className="text-accent text-5xl text-center font-hero mb-16">
           Digital Toolbox
@@ -29,14 +26,18 @@ const Tools = ({ id = "tools" }) => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="w-40 h-40 bg-accent shadow-md rounded-lg flex flex-col items-center justify-center text-center transition duration-300 transform 
-               hover:-translate-y-2 hover:bg-text hover:shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
+              className="w-40 h-40
+             bg-gradient-to-tr from-[rgb(var(--color-bg))] to-[rgb(var(--color-muted))]
+             border border-[rgb(var(--color-muted))] rounded-xl 
+             flex flex-col items-center justify-center text-center 
+             transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
             >
               <Icon
                 icon={skill.icon}
-                className={`text-6xl mb-1 ${skill.color}`}
+                className={`text-4xl mb-1 ${skill.color}`}
               />
-              <h2 className="text-main text-l font-semibold cursor-default">
+              <h2 className="text-accent text-md font-semibold cursor-default">
                 {skill.name}
               </h2>
             </div>
