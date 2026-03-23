@@ -4,7 +4,7 @@ const Footer = ({ ...props }) => {
       <p className="text-accent">
         Designed & Built by{" "}
         <a
-          href="www.linkedin.com/in/mark-maraya"
+          href="https://linkedin.com/in/mark-maraya/"
           className="text-link hover:text-linkHover"
         >
           Mark Maraya
