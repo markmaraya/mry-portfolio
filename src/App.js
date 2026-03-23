@@ -34,7 +34,7 @@ function App() {
 
       <Tools id="tools" />
 
-      <Projects id="projects" className="relative bg-bg h-screen pt-32" />
+      <Projects id="projects" />
 
       <Contact
         id="contact"
