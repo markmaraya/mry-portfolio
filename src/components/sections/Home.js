@@ -1,10 +1,13 @@
 import ScrollButton from "../ui/ScrollButton";
 
-const Home = ({ sectionRef, ...props }) => {
+const Home = ({ sectionRef }) => {
   return (
-    <section {...props}>
+    <section
+      id="home"
+      className="relative flex items-center flex-col h-screen -mt-16"
+    >
       <div className="flex-grow flex items-center justify-center">
-        <h2 className="text-7xl font-hero font-bold drop-shadow-lg z-10">
+        <h2 className="text-white text-7xl font-hero font-bold drop-shadow-lg z-10">
           Hi, I'm Puchi.
           <br />
           Front-end Developer

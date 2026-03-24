@@ -24,11 +24,7 @@ function App() {
       <BackgroundSVG className="fixed inset-0 w-full h-full -z-10" />
       <Header />
 
-      <Home
-        id="home"
-        className="relative flex items-center flex-col h-screen -mt-16 text-white"
-        sectionRef={sectionRef}
-      />
+      <Home sectionRef={sectionRef} />
 
       <About id="about" ref={sectionRef} />
 
