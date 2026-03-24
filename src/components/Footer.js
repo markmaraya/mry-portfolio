@@ -1,6 +1,6 @@
-const Footer = ({ ...props }) => {
+const Footer = () => {
   return (
-    <footer {...props}>
+    <footer className="bg-muted text-center py-6">
       <p className="text-accent">
         Designed & Built by{" "}
         <a

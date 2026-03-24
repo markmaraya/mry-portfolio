@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App h-screen overflow-y-scroll scroll-smooth scrollbar-hide">
-      <BackgroundSVG className="fixed inset-0 w-full h-full -z-10" />
+      <BackgroundSVG />
       <Header />
 
       <Home sectionRef={sectionRef} />
@@ -34,7 +34,7 @@ function App() {
 
       <Contact />
 
-      <Footer className="bg-muted text-center py-6" />
+      <Footer />
     </div>
   );
 }

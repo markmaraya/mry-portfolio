@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-const BackgroundSVG = ({ className }) => {
+const BackgroundSVG = () => {
   const trees1Depth = 3;
   const grassBaseDepth = 0.1;
   const grassDepth = 0.125;
@@ -58,7 +58,7 @@ const BackgroundSVG = ({ className }) => {
 
   return (
     <svg
-      className={className}
+      className="fixed inset-0 w-full h-full -z-10"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
