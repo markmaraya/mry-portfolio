@@ -36,10 +36,7 @@ function App() {
 
       <Projects id="projects" />
 
-      <Contact
-        id="contact"
-        className="relative bg-bg mx-auto flex flex-col px-4 pt-32 pb-20 min-h-[600px]"
-      />
+      <Contact id="contact" />
 
       <Footer className="bg-muted text-center py-6" />
     </div>

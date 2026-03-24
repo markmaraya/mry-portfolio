@@ -31,12 +31,10 @@ const contacts = [
   },
 ];
 
-const Contact = ({ ...props }) => {
+const Contact = ({ id = "contact" }) => {
   return (
-    <section {...props}>
-      <h3 className="text-accent text-5xl text-center font-hero">
-        Contact
-      </h3>
+    <section id={id} className="bg-bg flex flex-col pt-32 pb-20 min-h-[600px]">
+      <h3 className="text-accent text-5xl text-center font-hero">Contact</h3>
       <div className="flex flex-1 flex-wrap items-center justify-center gap-16 max-w-5xl mx-auto">
         {contacts.map((skill, index) => (
           <ContactItem
