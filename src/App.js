@@ -26,13 +26,13 @@ function App() {
 
       <Home sectionRef={sectionRef} />
 
-      <About id="about" ref={sectionRef} />
+      <About ref={sectionRef} />
 
-      <Tools id="tools" />
+      <Tools />
 
-      <Projects id="projects" />
+      <Projects />
 
-      <Contact id="contact" />
+      <Contact />
 
       <Footer className="bg-muted text-center py-6" />
     </div>

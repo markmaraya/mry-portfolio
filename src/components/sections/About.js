@@ -1,10 +1,10 @@
 import { forwardRef } from "react";
 import ProgressiveWebAppSVG from "../svg/ProgressiveWebAppSVG";
 
-const About = forwardRef(({ id = "about" }, ref) => {
+const About = forwardRef((props, ref) => {
   return (
     <section
-      id={id}
+      id="about"
       ref={ref}
       className="h-screen bg-bg flex flex-col items-center justify-center"
     >
