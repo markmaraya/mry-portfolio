@@ -27,7 +27,7 @@ const contacts = [
     iconPlain: "mdi:file-download",
     iconOriginal: "mdi:file-download",
     link: "/yourcv.pdf",
-    hoverColor: "#e2c88f",
+    hoverColor: "#f5f5eb",
   },
 ];
 
@@ -35,10 +35,12 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-bg flex flex-col pt-32 pb-20 min-h-[600px]"
+      className="h-[calc(100vh-6rem)] bg-bg flex flex-col items-center justify-center"
     >
-      <h3 className="text-accent text-5xl text-center font-hero">Contact</h3>
-      <div className="flex flex-1 flex-wrap items-center justify-center gap-16 max-w-5xl mx-auto">
+      <h3 className="text-accent text-5xl text-center font-hero mb-16">
+        Contact
+      </h3>
+      <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
         {contacts.map((skill, index) => (
           <ContactItem
             key={index}
@@ -60,22 +62,30 @@ const ContactItem = ({ iconPlain, iconOriginal, label, link, hoverColor }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col items-center transition-colors duration-300"
+      className="group bg-main/60 grid w-full sm:w-96 border border-accent rounded-xl h-20 overflow-hidden"
     >
-      <div className="relative w-12 h-12 mb-2">
-        <Icon
-          icon={iconOriginal}
-          className="w-full h-full absolute inset-0 z-0 text-[color:var(--hover-color)]"
-          style={{ "--hover-color": hoverColor }}
-        />
-
+      <div className="relative">
         <Icon
           icon={iconPlain}
-          className="w-full h-full absolute inset-0 z-10 text-accent transition-opacity duration-300 group-hover:opacity-0"
+          className="w-36 h-36 absolute inset-0 text-accent/10 
+          translate-x-[-20%] translate-y-[-15%] 
+          transition-all duration-300 ease-out 
+          group-hover:translate-x-4 group-hover:translate-y-4
+          group-hover:opacity-0 group-hover:w-12 group-hover:h-12"
+        />
+        <Icon
+          icon={iconOriginal}
+          className="w-36 h-36 absolute inset-0 text-[color:var(--hover-color)] opacity-0
+          translate-x-[-20%] translate-y-[-15%]           
+          transition-all duration-300 ease-out
+          group-hover:translate-x-4 group-hover:translate-y-4
+          group-hover:opacity-100 group-hover:w-12 group-hover:h-12"
+          style={{ "--hover-color": hoverColor }}
         />
       </div>
       <span
-        className={`text-lg font-medium text-accent opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0`}
+        className="text-lg font-medium text-accent translate-x-8
+        transition-transform duration-300 ease-out group-hover:translate-x-20"
       >
         {label}
       </span>
