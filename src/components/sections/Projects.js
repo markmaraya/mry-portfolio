@@ -16,9 +16,9 @@ const projectList = [
   },
 ];
 
-const Projects = ({ id = "projects" }) => {
+const Projects = () => {
   return (
-    <section id={id} className="min-h-screen bg-bg pt-32">
+    <section id="projects" className="min-h-screen bg-bg pt-32">
       <div className="max-w-6xl mx-auto px-4">
         <h3 className="text-accent text-5xl text-center font-hero mb-16">
           Projects
