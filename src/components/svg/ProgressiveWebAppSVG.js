@@ -1,13 +1,14 @@
-const ProgressiveWebAppSVG = () => {
+const ProgressiveWebAppSVG = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="438.116"
-      height="285.537"
+      width="1095.29"
+      height="713.842"
       viewBox="0 0 1095.29 713.842"
       role="img"
       artist="Katerina Limpitsouni"
       source="https://undraw.co/"
+      {...props}
     >
       <g transform="translate(-352.434 -211.319)">
         <rect
