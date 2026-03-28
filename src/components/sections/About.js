@@ -8,7 +8,7 @@ const About = forwardRef((props, ref) => {
       ref={ref}
       className="h-screen bg-bg flex flex-col items-center justify-center"
     >
-      <h3 className="text-accent text-5xl text-center font-hero mb-6">About</h3>
+      <h3 className="text-accent text-5xl font-hero mb-6">About</h3>
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 text-left text-text p-10 items-center">
         <div className="flex items-center justify-center">
           <ProgressiveWebAppSVG className="w-[80%] h-auto" />

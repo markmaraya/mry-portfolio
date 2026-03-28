@@ -37,7 +37,7 @@ const Contact = () => {
       id="contact"
       className="h-[calc(100vh-6rem)] bg-bg flex flex-col items-center justify-center"
     >
-      <h3 className="text-accent text-5xl text-center font-hero mb-16">
+      <h3 className="text-accent text-5xl font-hero mb-16">
         Contact
       </h3>
       <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
