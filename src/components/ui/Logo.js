@@ -6,7 +6,7 @@ const Logo = ({ onClick }) => {
       onClick={onClick}
       className="h-16 w-16 flex items-center justify-center cursor-pointer"
     >
-      <LogoSVG />
+      <LogoSVG className="h-full w-full" />
     </div>
   );
 };

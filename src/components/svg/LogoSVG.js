@@ -1,4 +1,4 @@
-const LogoSVG = () => {
+const LogoSVG = (props) => {
   return (
     <svg
       width="344"
@@ -6,6 +6,7 @@ const LogoSVG = () => {
       viewBox="0 0 344 344"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <defs>
         <linearGradient id="bgGradient" x1="0%" y1="100%" x2="100%" y2="0%">
