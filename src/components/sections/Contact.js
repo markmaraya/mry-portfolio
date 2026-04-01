@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const contacts = [
   {
@@ -32,6 +37,31 @@ const contacts = [
 ];
 
 const Contact = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#contact",
+        scroller: ".App",
+        start: "top 30%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    tl.fromTo(
+      ".contact-item",
+      { opacity: 0, y: 60, scale: 0.9 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.6,
+        delay: 0.3,
+        ease: "back.out(1.7)",
+        stagger: 0.2,
+      },
+    );
+  }, []);
+
   return (
     <section
       id="contact"
@@ -60,7 +90,7 @@ const ContactItem = ({ iconPlain, iconOriginal, label, link, hoverColor }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative grid w-full sm:w-96 h-20 
+      className="contact-item group relative grid w-full sm:w-96 h-20 
       border border-accent rounded-xl overflow-hidden 
       bg-main/60 hover:border-secondary"
     >
