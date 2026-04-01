@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
   { name: "Angular", icon: "logos:angular-icon" },
@@ -16,17 +21,46 @@ const skills = [
 ];
 
 const Tools = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".skills-grid",
+        scroller: ".App",
+        start: "top 60%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    tl.fromTo(
+      ".skill-card",
+      { opacity: 0, y: 80, scale: 0.9 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        ease: "back.out",
+        duration: 0.6,
+        stagger: {
+          each: 0.175,
+          grid: "auto",
+          from: "start",
+        },
+        onComplete: () => gsap.set(".skill-card", { clearProps: "y" }),
+      },
+    );
+  }, []);
+
   return (
     <section id="tools" className="min-h-screen bg-bg pt-32">
       <div className="max-w-6xl mx-auto px-4">
         <h3 className="text-accent text-5xl text-center font-hero mb-16">
           Digital Toolbox
         </h3>
-        <div className="flex flex-wrap justify-center gap-6 max-w-[736px] mx-auto">
+        <div className="skills-grid flex flex-wrap justify-center gap-6 max-w-[736px] mx-auto">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="w-40 h-40
+              className="skill-card w-40 h-40
              bg-gradient-to-tr from-[rgb(var(--color-bg))] to-[rgb(var(--color-muted))]
              border border-[rgb(var(--color-muted))] rounded-xl 
              flex flex-col items-center justify-center text-center 
