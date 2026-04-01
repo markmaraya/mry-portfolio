@@ -1,3 +1,9 @@
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const projectList = [
   {
     title: "Project One",
@@ -17,6 +23,60 @@ const projectList = [
 ];
 
 const Projects = () => {
+  useEffect(() => {
+    const projects = gsap.utils.toArray(".project-item");
+
+    projects.forEach((project, index) => {
+      const image = project.querySelector(".project-image");
+      const title = project.querySelector(".project-title");
+      const desc = project.querySelector(".project-desc");
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: project,
+          scroller: ".App",
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.fromTo(
+        image,
+        { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
+        {
+          opacity: 1,
+          x: 0,
+          ease: "power2.out",
+          duration: 0.6,
+        },
+      );
+
+      tl.fromTo(
+        title,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: "power2.out",
+          duration: 0.6,
+        },
+        "-=0.3"
+      );
+
+      tl.fromTo(
+        desc,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: "power2.out",
+          duration: 0.6,
+        },
+        "-=0.3"
+      );
+    });
+  }, []);
+
   return (
     <section id="projects" className="min-h-screen bg-bg pt-32">
       <div className="max-w-6xl mx-auto px-4">
@@ -27,7 +87,7 @@ const Projects = () => {
           {projectList.map((project, index) => (
             <div
               key={index}
-              className="grid md:grid-cols-2 gap-6 items-center p-6"
+              className="project-item grid md:grid-cols-2 gap-6 items-center p-6"
             >
               <div
                 className={`${index % 2 === 0 ? "order-1" : "order-2"} flex justify-center items-center`}
@@ -37,7 +97,7 @@ const Projects = () => {
                   alt={project.title}
                   className="rounded-lg w-full h-auto object-cover"
                 /> */}
-                <div className="bg-gray-400 w-full h-64 rounded-lg flex items-center justify-center">
+                <div className="project-image bg-gray-400 w-full h-64 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">
                     Image Placeholder
                   </span>
@@ -46,10 +106,10 @@ const Projects = () => {
               <div
                 className={`${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}
               >
-                <h4 className="text-secondary text-3xl font-hero mb-2">
+                <h4 className="project-title text-secondary text-3xl font-hero mb-2">
                   {project.title}
                 </h4>
-                <p className="text-text">{project.description}</p>
+                <p className="project-desc text-text">{project.description}</p>
               </div>
             </div>
           ))}
