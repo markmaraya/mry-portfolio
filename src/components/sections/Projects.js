@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Icon } from "@iconify/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,16 +10,34 @@ const projectList = [
     title: "Project One",
     description: "A responsive e-commerce site built with React and Tailwind.",
     image: "image.png",
+    techStack: [
+      { name: "React", icon: "mdi:react" },
+      { name: "Tailwind", icon: "mdi:tailwind" },
+      { name: "Node.js", icon: "mdi:nodejs" },
+      { name: "MongoDB", icon: "lineicons:mongodb" },
+    ],
   },
   {
     title: "Project Two",
     description: "A portfolio template designed for creative professionals.",
     image: "image.png",
+    techStack: [
+      { name: "React", icon: "mdi:react" },
+      { name: "Tailwind", icon: "mdi:tailwind" },
+      { name: "Node.js", icon: "mdi:nodejs" },
+      { name: "MongoDB", icon: "lineicons:mongodb" },
+    ],
   },
   {
     title: "Project Three",
     description: "A blog platform with markdown support and dark mode.",
     image: "image.png",
+    techStack: [
+      { name: "React", icon: "mdi:react" },
+      { name: "Tailwind", icon: "mdi:tailwind" },
+      { name: "Node.js", icon: "mdi:nodejs" },
+      { name: "MongoDB", icon: "lineicons:mongodb" },
+    ],
   },
 ];
 
@@ -30,6 +49,7 @@ const Projects = () => {
       const image = project.querySelector(".project-image");
       const title = project.querySelector(".project-title");
       const desc = project.querySelector(".project-desc");
+      const badges = project.querySelectorAll(".tech-badge");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -60,7 +80,7 @@ const Projects = () => {
           ease: "power2.out",
           duration: 0.6,
         },
-        "-=0.3"
+        "-=0.3",
       );
 
       tl.fromTo(
@@ -72,7 +92,20 @@ const Projects = () => {
           ease: "power2.out",
           duration: 0.6,
         },
-        "-=0.3"
+        "-=0.3",
+      );
+
+      tl.fromTo(
+        badges,
+        { opacity: 0, x: index % 2 === 0 ? 100 : -100 },
+        {
+          opacity: 1,
+          x: 0,
+          ease: "power3.out",
+          duration: 0.5,
+          stagger: index % 2 === 0 ? 0.15 : { each: 0.15, from: "end" },
+        },
+        "-=0.2",
       );
     });
   }, []);
@@ -110,6 +143,20 @@ const Projects = () => {
                   {project.title}
                 </h4>
                 <p className="project-desc text-text">{project.description}</p>
+                <div
+                  className={`flex flex-wrap gap-2 mt-4 ${index % 2 && "justify-end"}`}
+                >
+                  {project.techStack.map((tech) => (
+                    <div
+                      key={tech.name}
+                      className="tech-badge flex items-center gap-2 px-3 py-1 rounded-full 
+                       bg-secondary text-text pointer-events-none"
+                    >
+                      <Icon icon={tech.icon} className="w-5 h-5" />
+                      <span className="text-sm">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
