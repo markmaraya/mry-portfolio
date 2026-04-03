@@ -10,6 +10,8 @@ const projectList = [
     title: "Project One",
     description: "A responsive e-commerce site built with React and Tailwind.",
     image: "image.png",
+    liveLink: "",
+    githubLink: "",
     techStack: [
       { name: "React", icon: "mdi:react" },
       { name: "Tailwind", icon: "mdi:tailwind" },
@@ -21,6 +23,8 @@ const projectList = [
     title: "Project Two",
     description: "A portfolio template designed for creative professionals.",
     image: "image.png",
+    liveLink: "",
+    githubLink: "",
     techStack: [
       { name: "React", icon: "mdi:react" },
       { name: "Tailwind", icon: "mdi:tailwind" },
@@ -32,6 +36,8 @@ const projectList = [
     title: "Project Three",
     description: "A blog platform with markdown support and dark mode.",
     image: "image.png",
+    liveLink: "",
+    githubLink: "",
     techStack: [
       { name: "React", icon: "mdi:react" },
       { name: "Tailwind", icon: "mdi:tailwind" },
@@ -49,6 +55,7 @@ const Projects = () => {
       const image = project.querySelector(".project-image");
       const title = project.querySelector(".project-title");
       const desc = project.querySelector(".project-desc");
+      const links = project.querySelector(".project-links");
       const badges = project.querySelectorAll(".tech-badge");
 
       const tl = gsap.timeline({
@@ -85,6 +92,18 @@ const Projects = () => {
 
       tl.fromTo(
         desc,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: "power2.out",
+          duration: 0.6,
+        },
+        "-=0.3",
+      );
+
+      tl.fromTo(
+        links,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
@@ -143,6 +162,32 @@ const Projects = () => {
                   {project.title}
                 </h4>
                 <p className="project-desc text-text">{project.description}</p>
+
+                <div
+                  className={`project-links flex gap-3 mt-4 ${index % 2 && "justify-end"}`}
+                >
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded bg-link text-dark font-semibold shadow-md
+                    transform transition duration-200 
+                    hover:bg-linkHover hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+                  >
+                    View Project
+                  </a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded bg-dark/60 text-light shadow-md 
+                    transform transition duration-200 
+                    hover:bg-muted hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+                  >
+                    GitHub
+                  </a>
+                </div>
+
                 <div
                   className={`flex flex-wrap gap-2 mt-4 ${index % 2 && "justify-end"}`}
                 >
