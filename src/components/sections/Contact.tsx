@@ -3,8 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 
-import { contactLinks } from "./contactLinks";
-import type { ContactLink } from "./contactLinks";
+import { contactData } from "./contactData";
+import type { ContactData } from "./contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +41,7 @@ const Contact = () => {
     >
       <h3 className="text-accent text-5xl font-hero mb-16">Contact</h3>
       <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
-        {contactLinks.map((skill, index) => (
+        {contactData.map((skill, index) => (
           <ContactItem
             key={index}
             iconPlain={skill.iconPlain}
@@ -62,7 +62,7 @@ const ContactItem = ({
   label,
   link,
   hoverColor,
-}: ContactLink) => {
+}: ContactData) => {
   return (
     <a
       href={link}

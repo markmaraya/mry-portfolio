@@ -1,4 +1,4 @@
-export interface ContactLink {
+export interface ContactData {
   label: string;
   iconPlain: string;
   iconOriginal: string;
@@ -6,7 +6,7 @@ export interface ContactLink {
   hoverColor: string;
 }
 
-export const contactLinks: ContactLink[] = [
+export const contactData: ContactData[] = [
   {
     label: "LinkedIn",
     iconPlain: "simple-icons:linkedin",
