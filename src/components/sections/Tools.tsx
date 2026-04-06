@@ -3,22 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 
-gsap.registerPlugin(ScrollTrigger);
+import { toolsData } from "./toolsData";
 
-const skills = [
-  { name: "Angular", icon: "logos:angular-icon" },
-  { name: "JavaScript", icon: "logos:javascript" },
-  { name: "TypeScript", icon: "logos:typescript-icon" },
-  { name: "React", icon: "logos:react" },
-  { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
-  { name: "Material UI", icon: "logos:material-ui" },
-  { name: "Sass/SCSS", icon: "logos:sass" },
-  { name: "Figma", icon: "logos:figma" },
-  { name: "HTML5", icon: "devicon:html5" },
-  { name: "CSS3", icon: "devicon:css3" },
-  { name: "Git/GitHub", icon: "logos:git-icon" },
-  { name: "npm", icon: "devicon:npm-wordmark" },
-];
+gsap.registerPlugin(ScrollTrigger);
 
 const Tools = () => {
   useEffect(() => {
@@ -45,7 +32,9 @@ const Tools = () => {
           grid: "auto",
           from: "start",
         },
-        onComplete: () => gsap.set(".skill-card", { clearProps: "y" }),
+        onComplete: () => {
+          gsap.set(".skill-card", { clearProps: "y" });
+        },
       },
     );
   }, []);
@@ -57,7 +46,7 @@ const Tools = () => {
           Digital Toolbox
         </h3>
         <div className="skills-grid flex flex-wrap justify-center gap-6 max-w-[736px] mx-auto">
-          {skills.map((skill, index) => (
+          {toolsData.map((skill, index) => (
             <div
               key={index}
               className="skill-card w-40 h-40
@@ -67,10 +56,7 @@ const Tools = () => {
              transition-all duration-300 ease-out
              hover:-translate-y-2 hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
             >
-              <Icon
-                icon={skill.icon}
-                className={`text-4xl mb-1 ${skill.color}`}
-              />
+              <Icon icon={skill.icon} className={`text-4xl mb-1`} />
               <h2 className="text-accent text-md font-semibold cursor-default">
                 {skill.name}
               </h2>
