@@ -1,7 +1,11 @@
 import gsap from "gsap";
 import ChevronArrowSVG from "../svg/ChevronArrowSVG";
 
-const ScrollButton = ({ targetRef }) => {
+interface ScrollButtonProps {
+  targetRef: React.RefObject<HTMLElement>;
+}
+
+const ScrollButton: React.FC<ScrollButtonProps> = ({ targetRef }) => {
   const handleScroll = () => {
     gsap.to(".App", {
       duration: 1.8,

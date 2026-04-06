@@ -5,7 +5,11 @@ import ScrollButton from "../ui/ScrollButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home = ({ sectionRef }) => {
+interface HomeProps {
+  sectionRef: React.RefObject<HTMLElement>;
+}
+
+const Home: React.FC<HomeProps> = ({ sectionRef }) => {
   useEffect(() => {
     const tl = gsap.timeline();
 
