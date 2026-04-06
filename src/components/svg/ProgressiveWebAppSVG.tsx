@@ -1,4 +1,9 @@
-const ProgressiveWebAppSVG = (props) => {
+interface ProgressiveWebAppSVGProps extends React.SVGProps<SVGSVGElement> {
+  artist?: string; 
+  source?: string;
+}
+
+const ProgressiveWebAppSVG: React.FC<ProgressiveWebAppSVGProps> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

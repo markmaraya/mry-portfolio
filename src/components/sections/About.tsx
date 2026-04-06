@@ -6,7 +6,7 @@ import PawTrail from "../ui/PawTrail";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About = forwardRef((props, ref) => {
+const About = forwardRef<HTMLElement, Record<string, never>>((props, ref) => {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {

@@ -9,9 +9,11 @@ const PawTrail = () => {
   useEffect(() => {
     gsap.set(".paw", { opacity: 0 });
 
-    const path = document.getElementById("pawPath");
+    const path = document.getElementById("pawPath") as SVGPathElement | null;
+    if (!path) return;
+
     const pathLength = path.getTotalLength();
-    const paws = gsap.utils.toArray(".paw");
+    const paws = gsap.utils.toArray(".paw") as HTMLElement[];
     const tlPaw = gsap.timeline({ repeat: -1 });
 
     const stagger = 0.3;
