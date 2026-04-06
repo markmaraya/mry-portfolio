@@ -1,8 +1,8 @@
 import "./styles/style.css";
 import { useRef } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrollToPlugin from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import BackgroundSVG from "./components/svg/BackgroundSVG";
 import Footer from "./components/Footer";
@@ -16,8 +16,8 @@ import Tools from "./components/sections/Tools";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-function App() {
-  const sectionRef = useRef(null);
+const App: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className="App h-screen overflow-y-scroll scroll-smooth scrollbar-hide">
@@ -26,7 +26,7 @@ function App() {
 
       <Home sectionRef={sectionRef} />
 
-      <About ref={sectionRef} />
+      <About sectionRef={sectionRef} />
 
       <Tools />
 
@@ -37,6 +37,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

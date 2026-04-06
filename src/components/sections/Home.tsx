@@ -6,7 +6,7 @@ import ScrollButton from "../ui/ScrollButton";
 gsap.registerPlugin(ScrollTrigger);
 
 interface HomeProps {
-  sectionRef: React.RefObject<HTMLElement>;
+  sectionRef: React.RefObject<HTMLDivElement | null>;
 }
 
 const Home: React.FC<HomeProps> = ({ sectionRef }) => {

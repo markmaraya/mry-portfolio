@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProgressiveWebAppSVG from "../svg/ProgressiveWebAppSVG";
@@ -6,7 +6,11 @@ import PawTrail from "../ui/PawTrail";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About = forwardRef<HTMLElement, Record<string, never>>((props, ref) => {
+interface AboutProps {
+  sectionRef: React.RefObject<HTMLDivElement | null>;
+}
+
+const About: React.FC<AboutProps> = ({ sectionRef }) => {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -32,7 +36,7 @@ const About = forwardRef<HTMLElement, Record<string, never>>((props, ref) => {
   return (
     <section
       id="about"
-      ref={ref}
+      ref={sectionRef}
       className="h-screen bg-bg flex flex-col items-center justify-center"
     >
       <h3 className="text-accent text-5xl font-hero mb-6">About</h3>
@@ -59,6 +63,6 @@ const About = forwardRef<HTMLElement, Record<string, never>>((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default About;
