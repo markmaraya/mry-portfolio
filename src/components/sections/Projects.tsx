@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 
-import projectList from "./projectsData";
+import { projectList } from "./projectsData";
 import type { Project } from "./projectsData";
 
 gsap.registerPlugin(ScrollTrigger);

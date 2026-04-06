@@ -12,7 +12,7 @@ export interface Project {
   techStack: Tech[];
 }
 
-const projectList: Project[] = [
+export const projectList: Project[] = [
   {
     title: "Project One",
     description: "A responsive e-commerce site built with React and Tailwind.",
@@ -53,5 +53,3 @@ const projectList: Project[] = [
     ],
   },
 ];
-
-export default projectList;
