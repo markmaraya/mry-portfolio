@@ -1,4 +1,6 @@
-const LogoSVG = (props) => {
+interface LogoSVGProps extends React.SVGProps<SVGSVGElement> {}
+
+const LogoSVG: React.FC<LogoSVGProps> = (props) => {
   return (
     <svg
       width="344"

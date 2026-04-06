@@ -1,6 +1,10 @@
 import LogoSVG from "../svg/LogoSVG";
 
-const Logo = ({ onClick }) => {
+interface LogoProps {
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+const Logo: React.FC<LogoProps> = ({ onClick }) => {
   return (
     <div
       onClick={onClick}

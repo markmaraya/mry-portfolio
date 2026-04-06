@@ -16,11 +16,16 @@ const BackgroundSVG = () => {
   const moonDepth = 0.045;
 
   useGSAP(() => {
-    ScrollTrigger.scrollerProxy(".App", {
+    const appElement = document.querySelector(".App") as HTMLElement | null;
+
+    if (!appElement) return;
+
+    ScrollTrigger.scrollerProxy(appElement, {
       scrollTop(value) {
-        return arguments.length
-          ? (document.querySelector(".App").scrollTop = value)
-          : document.querySelector(".App").scrollTop;
+        if (typeof value === "number") {
+          appElement.scrollTop = value;
+        }
+        return appElement.scrollTop;
       },
       getBoundingClientRect() {
         return {
@@ -31,9 +36,7 @@ const BackgroundSVG = () => {
         };
       },
 
-      pinType: document.querySelector(".App").style.transform
-        ? "transform"
-        : "fixed",
+      pinType: appElement.style.transform ? "transform" : "fixed",
     });
 
     let tl = gsap.timeline({
@@ -47,10 +50,11 @@ const BackgroundSVG = () => {
     });
 
     gsap.utils.toArray(".layer").forEach((layer) => {
-      let depth = layer.dataset.depth;
-      let data = layer.getBoundingClientRect();
-      let move = data.y * depth;
-      tl.to(layer, { y: -move, ease: "none" }, 0);
+      const el = layer as HTMLElement;
+      const depth = parseFloat(el.dataset.depth ?? "0");
+      const rect = el.getBoundingClientRect();
+      const move = rect.y * depth;
+      tl.to(el, { y: -move, ease: "none" }, 0);
     });
 
     ScrollTrigger.refresh();
@@ -66,7 +70,6 @@ const BackgroundSVG = () => {
       x="0px"
       y="0px"
       viewBox="0 0 252.388 166.75"
-      style={{ enableBackground: "new 0 0 252.388 166.75" }}
       xmlSpace="preserve"
       preserveAspectRatio="none"
     >
