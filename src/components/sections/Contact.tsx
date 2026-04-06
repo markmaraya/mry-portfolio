@@ -3,38 +3,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 
-gsap.registerPlugin(ScrollTrigger);
+import { contactLinks } from "./contactLinks";
+import type { ContactLink } from "./contactLinks";
 
-const contacts = [
-  {
-    label: "LinkedIn",
-    iconPlain: "simple-icons:linkedin",
-    iconOriginal: "logos:linkedin-icon",
-    link: "https://linkedin.com/in/mark-maraya/",
-    hoverColor: "#0a66c2",
-  },
-  {
-    label: "Gmail",
-    iconPlain: "simple-icons:gmail",
-    iconOriginal: "logos:google-gmail",
-    link: "mailto:markanthonymaraya@gmail.com",
-    hoverColor: "#ea4335",
-  },
-  {
-    label: "GitHub",
-    iconPlain: "simple-icons:github",
-    iconOriginal: "simple-icons:github",
-    link: "https://github.com/markmaraya",
-    hoverColor: "#0fbf3e",
-  },
-  {
-    label: "CV",
-    iconPlain: "mdi:file-download",
-    iconOriginal: "mdi:file-download",
-    link: "/yourcv.pdf",
-    hoverColor: "#f5f5eb",
-  },
-];
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   useEffect(() => {
@@ -69,7 +41,7 @@ const Contact = () => {
     >
       <h3 className="text-accent text-5xl font-hero mb-16">Contact</h3>
       <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
-        {contacts.map((skill, index) => (
+        {contactLinks.map((skill, index) => (
           <ContactItem
             key={index}
             iconPlain={skill.iconPlain}
@@ -84,7 +56,13 @@ const Contact = () => {
   );
 };
 
-const ContactItem = ({ iconPlain, iconOriginal, label, link, hoverColor }) => {
+const ContactItem = ({
+  iconPlain,
+  iconOriginal,
+  label,
+  link,
+  hoverColor,
+}: ContactLink) => {
   return (
     <a
       href={link}
@@ -110,7 +88,7 @@ const ContactItem = ({ iconPlain, iconOriginal, label, link, hoverColor }) => {
           transition-all duration-300 ease-out
           group-hover:translate-x-4 group-hover:translate-y-4
           group-hover:opacity-100 group-hover:w-12 group-hover:h-12"
-          style={{ "--hover-color": hoverColor }}
+          style={{ "--hover-color": hoverColor } as React.CSSProperties}
         />
       </div>
       <span
