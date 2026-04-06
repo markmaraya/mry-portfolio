@@ -4,10 +4,13 @@ import Logo from "./ui/Logo";
 
 const sectionIds = ["home", "about", "tools", "projects", "contact"];
 
-const Header = () => {
-  const [activeLink, setActiveLink] = useState("home");
+const Header: React.FC = () => {
+  const [activeLink, setActiveLink] = useState<string>("home");
 
-  const handleNavClick = (event, targetId) => {
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>,
+    targetId: string,
+  ) => {
     event.preventDefault();
     gsap.to(".App", {
       duration: 1.2,
@@ -17,10 +20,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const app = document.querySelector(".App");
+    const app = document.querySelector(".App") as HTMLElement | null;
     if (!app) return;
 
-    const observerOptions = {
+    const observerOptions: IntersectionObserverInit = {
       root: app,
       rootMargin: "0px 0px -50% 0px",
       threshold: 0.25,
