@@ -1,4 +1,18 @@
-const projectList = [
+export interface Tech {
+  name: string;
+  icon: string;
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  image: string;
+  liveLink: string;
+  githubLink: string;
+  techStack: Tech[];
+}
+
+const projectList: Project[] = [
   {
     title: "Project One",
     description: "A responsive e-commerce site built with React and Tailwind.",

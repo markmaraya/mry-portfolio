@@ -4,10 +4,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 
 import projectList from "./projectsData";
+import type { Project } from "./projectsData";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectItem = ({ project, index }) => (
+interface ProjectItemProps {
+  project: Project;
+  index: number;
+}
+
+const ProjectItem = ({ project, index }: ProjectItemProps) => (
   <div className="project-item grid md:grid-cols-2 gap-6 items-center p-6">
     <div
       className={`${index % 2 === 0 ? "order-1" : "order-2"} flex justify-center items-center`}
@@ -72,7 +78,7 @@ const ProjectItem = ({ project, index }) => (
 
 const Projects = () => {
   useEffect(() => {
-    const projects = gsap.utils.toArray(".project-item");
+    const projects = gsap.utils.toArray(".project-item") as HTMLElement[];
 
     projects.forEach((project, index) => {
       const image = project.querySelector(".project-image");
