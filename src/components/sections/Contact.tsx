@@ -62,12 +62,15 @@ const ContactItem = ({
   label,
   link,
   hoverColor,
+  isDownload,
+  downloadFileName,
 }: ContactData) => {
   return (
     <a
       href={link}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isDownload ? undefined : "_blank"}
+      rel={isDownload ? undefined : "noopener noreferrer"}
+      download={isDownload ? downloadFileName || true : undefined}
       className="contact-item group relative grid w-full sm:w-96 h-20 
       border border-accent rounded-xl overflow-hidden 
       bg-main/60 hover:border-secondary"

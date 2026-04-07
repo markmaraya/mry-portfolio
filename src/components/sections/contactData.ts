@@ -4,6 +4,8 @@ export interface ContactData {
   iconOriginal: string;
   link: string;
   hoverColor: string;
+  isDownload?: boolean;
+  downloadFileName?: string;
 }
 
 export const contactData: ContactData[] = [
@@ -32,7 +34,9 @@ export const contactData: ContactData[] = [
     label: "CV",
     iconPlain: "mdi:file-download",
     iconOriginal: "mdi:file-download",
-    link: "/yourcv.pdf",
+    link: "/Mark_Maraya_CV.pdf",
     hoverColor: "#f5f5eb",
+    isDownload: true,
+    downloadFileName: "Mark_Maraya_CV.pdf",
   },
 ];
