@@ -14,18 +14,15 @@ interface ProjectItemProps {
 }
 
 const ProjectItem = ({ project, index }: ProjectItemProps) => (
-  <div className="project-item grid md:grid-cols-2 gap-6 items-center p-6">
+  <div className="project-item grid md:grid-cols-2 gap-24 items-center p-6">
     <div
       className={`${index % 2 === 0 ? "order-1" : "order-2"} flex justify-center items-center`}
     >
-      {/* <img
-                  src={project.image}
-                  alt={project.title}
-                  className="rounded-lg w-full h-auto object-cover"
-                /> */}
-      <div className="project-image bg-gray-400 w-full h-64 rounded-lg flex items-center justify-center">
-        <span className="text-white font-bold">Image Placeholder</span>
-      </div>
+      <img
+        src={project.image}
+        alt={project.title}
+        className="project-image rounded-lg w-full h-auto object-cover shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+      />
     </div>
     <div className={`${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}>
       <h4 className="project-title text-secondary text-3xl font-hero mb-2">
@@ -91,7 +88,7 @@ const Projects = () => {
         scrollTrigger: {
           trigger: project,
           scroller: ".App",
-          start: "top 60%",
+          start: "top 80%",
           toggleActions: "play none none reverse",
         },
       });
@@ -160,11 +157,11 @@ const Projects = () => {
 
   return (
     <section id="projects" className="min-h-screen bg-bg pt-32">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <h3 className="text-accent text-5xl text-center font-hero mb-16">
           Projects
         </h3>
-        <div className="space-y-16">
+        <div className="space-y-28">
           {projectList.map((project, index) => (
             <ProjectItem key={index} project={project} index={index} />
           ))}
