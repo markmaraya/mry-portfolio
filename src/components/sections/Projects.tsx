@@ -30,15 +30,12 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
       </h4>
       <p className="project-desc text-text">{project.description}</p>
 
-      <div
-        className={`project-links flex gap-3 mt-4 ${index % 2 && "justify-end"}`}
-      >
+      <div className={`flex gap-3 mt-4 ${index % 2 && "justify-end"}`}>
         <a
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 rounded bg-link text-dark font-semibold shadow-md
-                    transform transition duration-200 
+          className="project-link px-4 py-2 rounded bg-link text-dark font-semibold shadow-md
                     hover:bg-linkHover hover:shadow-custom hover:-translate-y-1"
         >
           View Project
@@ -47,8 +44,7 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
           href={project.githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 rounded bg-dark/60 text-light shadow-md 
-                    transform transition duration-200 
+          className="project-link px-4 py-2 rounded bg-dark/60 text-light shadow-md
                     hover:bg-muted hover:shadow-custom hover:-translate-y-1"
         >
           GitHub
@@ -81,8 +77,10 @@ const Projects = () => {
       const image = project.querySelector(".project-image");
       const title = project.querySelector(".project-title");
       const desc = project.querySelector(".project-desc");
-      const links = project.querySelector(".project-links");
+      const links = project.querySelectorAll(".project-link");
       const badges = project.querySelectorAll(".tech-badge");
+
+      const hoverClasses = ["transform", "transition", "duration-200"];
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -90,41 +88,29 @@ const Projects = () => {
           scroller: ".App",
           start: "top 80%",
           toggleActions: "play none none reverse",
+          onLeaveBack: () => {
+            links.forEach((el) => el.classList.remove(...hoverClasses));
+          },
         },
       });
 
       tl.fromTo(
         image,
         { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
-        {
-          opacity: 1,
-          x: 0,
-          ease: "power2.out",
-          duration: 0.6,
-        },
+        { opacity: 1, x: 0, ease: "power2.out", duration: 0.6 },
       );
 
       tl.fromTo(
         title,
         { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          ease: "power2.out",
-          duration: 0.6,
-        },
+        { opacity: 1, y: 0, ease: "power2.out", duration: 0.6 },
         "-=0.3",
       );
 
       tl.fromTo(
         desc,
         { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          ease: "power2.out",
-          duration: 0.6,
-        },
+        { opacity: 1, y: 0, ease: "power2.out", duration: 0.6 },
         "-=0.3",
       );
 
@@ -136,6 +122,11 @@ const Projects = () => {
           y: 0,
           ease: "power2.out",
           duration: 0.6,
+          stagger: 0.15,
+          onComplete: () => {
+            links.forEach((el) => el.classList.add(...hoverClasses));
+            gsap.set(links, { clearProps: "y" });
+          },
         },
         "-=0.3",
       );
