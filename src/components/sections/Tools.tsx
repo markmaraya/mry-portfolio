@@ -54,7 +54,7 @@ const Tools = () => {
              border border-[rgb(var(--color-muted))] rounded-xl 
              flex flex-col items-center justify-center text-center 
              transition-all duration-300 ease-out
-             hover:-translate-y-2 hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+             hover:-translate-y-2 hover:shadow-custom"
             >
               <Icon icon={skill.icon} className={`text-4xl mb-1`} />
               <h2 className="text-accent text-md font-semibold cursor-default">

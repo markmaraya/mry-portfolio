@@ -21,7 +21,7 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
       <img
         src={project.image}
         alt={project.title}
-        className="project-image rounded-lg w-full h-auto object-cover shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+        className="project-image rounded-lg w-full h-auto object-cover shadow-custom"
       />
     </div>
     <div className={`grid gap-4 ${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}>
@@ -39,7 +39,7 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
           rel="noopener noreferrer"
           className="px-4 py-2 rounded bg-link text-dark font-semibold shadow-md
                     transform transition duration-200 
-                    hover:bg-linkHover hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+                    hover:bg-linkHover hover:shadow-custom hover:-translate-y-1"
         >
           View Project
         </a>
@@ -49,7 +49,7 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
           rel="noopener noreferrer"
           className="px-4 py-2 rounded bg-dark/60 text-light shadow-md 
                     transform transition duration-200 
-                    hover:bg-muted hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+                    hover:bg-muted hover:shadow-custom hover:-translate-y-1"
         >
           GitHub
         </a>

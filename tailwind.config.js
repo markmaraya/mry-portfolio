@@ -24,6 +24,9 @@ module.exports = {
         hero: ["BushcraftTextured", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
+      boxShadow: {
+        custom: "0 4px 12px rgba(0, 0, 0, 0.3)",
+      },
     },
   },
   plugins: [],
