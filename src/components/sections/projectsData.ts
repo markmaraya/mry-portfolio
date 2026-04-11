@@ -16,16 +16,17 @@ export interface Project {
 
 export const projectList: Project[] = [
   {
-    title: "Project One",
-    description: "A responsive e-commerce site built with React and Tailwind.",
+    title: "Front-End Developer Portfolio",
+    description:
+      "A responsive React and TypeScript portfolio showcasing projects and skills. Features a refined project section with improved layout, polished styling, and a modern design to highlight work effectively.",
     image: project1,
     liveLink: "",
-    githubLink: "",
+    githubLink: "https://github.com/markmaraya/mry-portfolio",
     techStack: [
       { name: "React", icon: "mdi:react" },
+      { name: "Typescript", icon: "mdi:language-typescript" },
       { name: "Tailwind", icon: "mdi:tailwind" },
-      { name: "Node.js", icon: "mdi:nodejs" },
-      { name: "MongoDB", icon: "lineicons:mongodb" },
+      { name: "GSAP", icon: "mdi:animation" },
     ],
   },
 ];

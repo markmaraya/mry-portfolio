@@ -24,7 +24,7 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
         className="project-image rounded-lg w-full h-auto object-cover shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
       />
     </div>
-    <div className={`${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}>
+    <div className={`grid gap-4 ${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}>
       <h4 className="project-title text-secondary text-3xl font-hero mb-2">
         {project.title}
       </h4>
