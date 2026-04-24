@@ -24,7 +24,9 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
         className="project-image rounded-lg w-full h-auto object-cover shadow-custom"
       />
     </div>
-    <div className={`grid gap-4 ${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}>
+    <div
+      className={`grid gap-4 ${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}
+    >
       <h4 className="project-title text-secondary text-3xl font-hero mb-2">
         {project.title}
       </h4>
@@ -153,9 +155,11 @@ const Projects = () => {
           Projects
         </h3>
         <div className="space-y-28">
-          {projectList.map((project, index) => (
-            <ProjectItem key={index} project={project} index={index} />
-          ))}
+          {[...projectList]
+            .sort((a, b) => a.order - b.order)
+            .map((project, index) => (
+              <ProjectItem key={index} project={project} index={index} />
+            ))}
         </div>
       </div>
     </section>

@@ -12,6 +12,7 @@ export interface Project {
   liveLink: string;
   githubLink: string;
   techStack: Tech[];
+  order: number;
 }
 
 export const projectList: Project[] = [
@@ -28,5 +29,23 @@ export const projectList: Project[] = [
       { name: "Tailwind", icon: "mdi:tailwind" },
       { name: "GSAP", icon: "mdi:animation" },
     ],
+    order: 2,
+  },
+  {
+    title: "Dealership Management System",
+    description:
+      "A streamlined platform for managing vehicle inventory, sales, and expenses. Designed to simplify dealership operations, it provides organized workflows, and an intuitive interface to keep business running smoothly.",
+    image: project1,
+    liveLink: "",
+    githubLink: "https://github.com/markmaraya/richannapp",
+    techStack: [
+      { name: "Angular", icon: "mdi:angular" },
+      { name: "Node.js", icon: "mdi:nodejs" },
+      { name: "MongoDB", icon: "simple-icons:mongodb" },
+      { name: "Express", icon: "simple-icons:express" },
+      { name: "Angular Material", icon: "devicon-plain:angularmaterial" },
+      { name: "SCSS", icon: "mdi:sass" },
+    ],
+    order: 1,
   },
 ];
