@@ -12,8 +12,8 @@ const LogoSVG: React.FC<LogoSVGProps> = (props) => {
     >
       <defs>
         <linearGradient id="bgGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#4a5f4a" />
-          <stop offset="100%" stop-color="#588157" />
+          <stop offset="0%" stopColor="#4a5f4a" />
+          <stop offset="100%" stopColor="#588157" />
         </linearGradient>
       </defs>
 
@@ -25,7 +25,7 @@ const LogoSVG: React.FC<LogoSVGProps> = (props) => {
         fill="url(#bgGradient)"
         transform="rotate(45 172 172)"
         stroke="#d4a373"
-        stroke-width="4"
+        strokeWidth="4"
       />
 
       <g transform="translate(60,60) scale(0.78)">
@@ -41,7 +41,7 @@ const LogoSVG: React.FC<LogoSVGProps> = (props) => {
           d="M107.408 47.1855H59.4492L142.5 188.933L142.6 189.05V260.686H118.782L118.639 260.428L0.138672 46.9277L0 46.6787L27.3984 0L107.408 47.1855Z
             M285.652 46.6787L285.514 46.9277L167.014 260.428L166.87 260.686H142.6V189.05L144.7 188.933L226.203 47.1855H178.244L258.254 0L285.652 46.6787Z"
           fill="#dde5b6"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
       </g>
     </svg>
