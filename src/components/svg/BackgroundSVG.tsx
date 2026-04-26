@@ -1,3 +1,4 @@
+import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -14,6 +15,8 @@ const BackgroundSVG = () => {
   const mountain2Depth = 0.075;
   const mountain3Depth = 0.06;
   const moonDepth = 0.045;
+
+  const [isSmall, setIsSmall] = React.useState(false);
 
   useGSAP(() => {
     const appElement = document.querySelector(".App") as HTMLElement | null;
@@ -60,6 +63,13 @@ const BackgroundSVG = () => {
     ScrollTrigger.refresh();
   });
 
+  React.useEffect(() => {
+    const handleResize = () => setIsSmall(window.innerWidth < 1280);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <svg
       className="fixed inset-0 w-full h-full -z-10"
@@ -71,7 +81,7 @@ const BackgroundSVG = () => {
       y="0px"
       viewBox="0 0 252.388 166.75"
       xmlSpace="preserve"
-      preserveAspectRatio="none"
+      preserveAspectRatio={isSmall ? "xMidYMid slice" : "none"}
     >
       <g>
         <defs>

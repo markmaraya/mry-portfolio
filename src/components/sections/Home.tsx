@@ -63,10 +63,10 @@ const Home: React.FC<HomeProps> = ({ sectionRef }) => {
   return (
     <section
       id="home"
-      className="home relative flex items-center flex-col h-screen -mt-16"
+      className="home relative flex items-center flex-col h-screen -mt-16 px-4"
     >
       <div className="flex-grow flex items-center justify-center">
-        <h2 className="text-white text-7xl font-hero font-bold drop-shadow-lg z-10">
+        <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-hero font-bold drop-shadow-lg z-10 leading-tight">
           <span className="home-heading-left inline-block">Hi, I'm Puchi.</span>
           <br />
           <span className="home-heading-right inline-block">
@@ -74,7 +74,7 @@ const Home: React.FC<HomeProps> = ({ sectionRef }) => {
           </span>
         </h2>
       </div>
-      <div className="home-btn absolute top-[62%]">
+      <div className="home-btn absolute top-[62%] sm:top-[65%]">
         <ScrollButton targetRef={sectionRef} />
       </div>
     </section>
