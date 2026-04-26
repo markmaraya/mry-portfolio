@@ -44,14 +44,16 @@ const About: React.FC<AboutProps> = ({ sectionRef }) => {
     <section
       id="about"
       ref={sectionRef}
-      className="h-screen bg-bg flex flex-col items-center justify-center"
+      className="min-h-screen bg-bg flex flex-col items-center justify-center px-4 py-24"
     >
-      <h3 className="text-accent text-5xl font-hero mb-6">About</h3>
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 p-10 items-center">
-        <div className="flex items-center justify-center">
+      <h3 className="text-accent text-3xl sm:text-4xl md:text-5xl font-hero mb-6">
+        About
+      </h3>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="items-center justify-center hidden md:flex">
           <ProgressiveWebAppSVG className="about-svg w-[80%] h-auto" />
         </div>
-        <div className="about-me relative p-4 text-left text-text">
+        <div className="about-me relative p-6 text-left text-text text-sm sm:text-base leading-relaxed">
           <p className="leading-relaxed mb-6">
             I’m a{" "}
             <span className="inline-block relative font-hero text-secondary text-2xl leading-none">
