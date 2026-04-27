@@ -39,8 +39,8 @@ const Contact = () => {
       id="contact"
       className="h-[calc(100vh-6rem)] bg-bg flex flex-col items-center justify-center"
     >
-      <h3 className="text-accent text-5xl font-hero mb-16">Contact</h3>
-      <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
+      <h3 className="text-accent text-3xl sm:text-4xl md:text-5xl font-hero mb-10 sm:mb-16">Contact</h3>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
         {contactData.map((skill, index) => (
           <ContactItem
             key={index}
@@ -71,9 +71,9 @@ const ContactItem = ({
       target={isDownload ? undefined : "_blank"}
       rel={isDownload ? undefined : "noopener noreferrer"}
       download={isDownload ? downloadFileName || true : undefined}
-      className="contact-item group relative grid w-full sm:w-96 h-20 
+      className="contact-item group relative grid w-80 lg:w-96 h-16 sm:h-20
       border border-accent rounded-xl overflow-hidden 
-      bg-main/60 hover:border-secondary"
+      bg-main/60 hover:border-secondary transition-colors duration-300 ease-out"
     >
       <div className="relative">
         <Icon
