@@ -14,9 +14,9 @@ interface ProjectItemProps {
 }
 
 const ProjectItem = ({ project, index }: ProjectItemProps) => (
-  <div className="project-item grid md:grid-cols-2 gap-24 items-center p-6">
+  <div className="project-item grid md:grid-cols-2 gap-12 md:gap-24 items-center p-6">
     <div
-      className={`${index % 2 === 0 ? "order-1" : "order-2"} flex justify-center items-center`}
+      className={`order-1 ${index % 2 === 0 ? "md:order-1" : "md:order-2"} flex justify-center items-center`}
     >
       <img
         src={project.image}
@@ -25,9 +25,9 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
       />
     </div>
     <div
-      className={`grid gap-4 ${index % 2 === 0 ? "order-2" : "order-1 text-right"}`}
+      className={`order-2 ${index % 2 === 0 ? "md:order-2" : "md:order-1 text-right"} grid gap-4`}
     >
-      <h4 className="project-title text-secondary text-3xl font-hero mb-2">
+      <h4 className="project-title text-secondary text-2xl sm:text-3xl font-hero mb-2">
         {project.title}
       </h4>
       <p className="project-desc text-text">{project.description}</p>
@@ -151,10 +151,10 @@ const Projects = () => {
   return (
     <section id="projects" className="min-h-screen bg-bg pt-32">
       <div className="max-w-7xl mx-auto px-4">
-        <h3 className="text-accent text-5xl text-center font-hero mb-16">
+        <h3 className="text-accent text-3xl sm:text-4xl md:text-5xl text-center font-hero mb-12 sm:mb-16">
           Projects
         </h3>
-        <div className="space-y-28">
+        <div className="space-y-12 sm:space-y-20 md:space-y-28">
           {[...projectList]
             .sort((a, b) => a.order - b.order)
             .map((project, index) => (
