@@ -1,4 +1,5 @@
 import project1 from "../../assets/projects/project1.jpg";
+import project2 from "../../assets/projects/project2.jpg";
 
 export interface Tech {
   name: string;
@@ -35,7 +36,7 @@ export const projectList: Project[] = [
     title: "Dealership Management System",
     description:
       "A streamlined platform for managing vehicle inventory, sales, and expenses. Designed to simplify dealership operations, it provides organized workflows, and an intuitive interface to keep business running smoothly.",
-    image: project1,
+    image: project2,
     liveLink: "",
     githubLink: "https://github.com/markmaraya/richannapp",
     techStack: [
