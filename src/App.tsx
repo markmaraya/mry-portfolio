@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="App h-screen overflow-y-scroll scroll-smooth scrollbar-hide">
+    <div className="App h-screen overflow-y-scroll scroll-smooth scrollbar-hide overflow-x-hidden overscroll-none">
       <BackgroundSVG />
       <Header />
 
