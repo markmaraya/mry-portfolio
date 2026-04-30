@@ -1,6 +1,44 @@
-# Getting Started with Create React App
+# Front-End Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio built with **React** and **Tailwind CSS** to showcase my projects, skills, and experience as a front-end developer.
+
+---
+
+## 🚀 Features
+- Modern UI built with **React** and **Tailwind CSS**
+- Responsive design for mobile, tablet, and desktop
+- Project showcase with live demo links and GitHub repos
+- Smooth navigation and interactive components
+- Clean, maintainable codebase following best practices
+
+---
+
+## 🛠️ Tech Stack
+- **React** – component-based architecture
+- **Tailwind CSS** – utility-first styling
+- **TypeScript**
+- **Create React App**
+- **Netlify**
+
+---
+
+## 📂 Project Showcase
+Each project includes:
+- **Title & Description**
+- **Tech Stack Used**
+- **Live Demo Link**
+- **GitHub Repository**
+
+Example:
+- **Portfolio Website**
+  - Built with React + Tailwind
+  - [Live Demo](https://www.markmaraya.netlify.app)
+  - [GitHub Repo](https://github.com/markmaraya/mry-portfolio)
+
+---
+
+## ⚙️ Installation & Setup
+Clone the repo and install dependencies:
 
 ## Available Scripts
 
@@ -38,33 +76,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
