@@ -6,6 +6,7 @@ A personal portfolio built with **React** and **Tailwind CSS** to showcase my pr
 
 ## 🚀 Features
 - Modern UI built with **React** and **Tailwind CSS**
+- Engaging animations powered by **GSAP**
 - Responsive design for mobile, tablet, and desktop
 - Project showcase with live demo links and GitHub repos
 - Smooth navigation and interactive components
@@ -16,6 +17,7 @@ A personal portfolio built with **React** and **Tailwind CSS** to showcase my pr
 ## 🛠️ Tech Stack
 - **React** – component-based architecture
 - **Tailwind CSS** – utility-first styling
+- **GSAP** – smooth animations and interactive transitions
 - **TypeScript**
 - **Create React App**
 - **Netlify**
@@ -31,8 +33,8 @@ Each project includes:
 
 Example:
 - **Portfolio Website**
-  - Built with React + Tailwind
-  - [Live Demo](https://www.markmaraya.netlify.app)
+  - Built with React + Tailwind + GSAP
+  - [Live Demo](https://markmaraya.netlify.app)
   - [GitHub Repo](https://github.com/markmaraya/mry-portfolio)
 
 ---
