@@ -22,7 +22,7 @@ export const projectList: Project[] = [
     description:
       "A responsive React and TypeScript portfolio showcasing projects and skills. Features a refined project section with improved layout, polished styling, and a modern design to highlight work effectively.",
     image: project1,
-    liveLink: "",
+    liveLink: "https://markmaraya.netlify.app",
     githubLink: "https://github.com/markmaraya/mry-portfolio",
     techStack: [
       { name: "React", icon: "mdi:react" },
@@ -37,8 +37,8 @@ export const projectList: Project[] = [
     description:
       "A streamlined platform for managing vehicle inventory, sales, and expenses. Designed to simplify dealership operations, it provides organized workflows, and an intuitive interface to keep business running smoothly.",
     image: project2,
-    liveLink: "",
-    githubLink: "https://github.com/markmaraya/richannapp",
+    liveLink: "https://mmdms.netlify.app",
+    githubLink: "https://github.com/markmaraya/dealership-management-system",
     techStack: [
       { name: "Angular", icon: "mdi:angular" },
       { name: "Node.js", icon: "mdi:nodejs" },
