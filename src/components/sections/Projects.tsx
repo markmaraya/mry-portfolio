@@ -42,15 +42,17 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => (
         >
           View Project
         </a>
-        <a
-          href={project.githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link px-4 py-2 rounded bg-dark/60 text-light shadow-md
+        {project.githubLink && (
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link px-4 py-2 rounded bg-dark/60 text-light shadow-md
                     hover:bg-muted hover:shadow-custom hover:-translate-y-1"
-        >
-          GitHub
-        </a>
+          >
+            GitHub
+          </a>
+        )}
       </div>
 
       <div

@@ -1,5 +1,6 @@
 import project1 from "../../assets/projects/project1.jpg";
 import project2 from "../../assets/projects/project2.jpg";
+import project3 from "../../assets/projects/project3.jpg";
 
 export interface Tech {
   name: string;
@@ -11,7 +12,7 @@ export interface Project {
   description: string;
   image: string;
   liveLink: string;
-  githubLink: string;
+  githubLink?: string;
   techStack: Tech[];
   order: number;
 }
@@ -30,7 +31,7 @@ export const projectList: Project[] = [
       { name: "Tailwind", icon: "mdi:tailwind" },
       { name: "GSAP", icon: "mdi:animation" },
     ],
-    order: 2,
+    order: 3,
   },
   {
     title: "Dealership Management System",
@@ -46,6 +47,27 @@ export const projectList: Project[] = [
       { name: "Express", icon: "simple-icons:express" },
       { name: "Angular Material", icon: "devicon-plain:angularmaterial" },
       { name: "SCSS", icon: "mdi:sass" },
+    ],
+    order: 2,
+  },
+  {
+    title: "Japan Bucket",
+    description:
+      "An interactive travel planning platform that generates, manages, and visualizes custom itineraries and regional routes across Japan. Features dynamic mapping, active and archived trip swapping, and a seamless user interface.",
+    image: project3,
+    liveLink: "https://japanbucket.com",
+    techStack: [
+      { name: "Next.js", icon: "simple-icons:nextdotjs" },
+      { name: "TypeScript", icon: "mdi:language-typescript" },
+      { name: "Chakra UI", icon: "simple-icons:chakraui" },
+      { name: "MapTiler", icon: "simple-icons:maptiler" },
+      { name: "MapLibre GL", icon: "simple-icons:maplibre" },
+      { name: "Supabase", icon: "simple-icons:supabase" },
+      { name: "React Hook Form", icon: "simple-icons:reacthookform" },
+      { name: "Stripe", icon: "simple-icons:stripe" },
+      { name: "OpenAI", icon: "simple-icons:openai" },
+      { name: "Google Cloud Console", icon: "mdi:google-cloud" },
+      { name: "Vercel", icon: "simple-icons:vercel" },
     ],
     order: 1,
   },
