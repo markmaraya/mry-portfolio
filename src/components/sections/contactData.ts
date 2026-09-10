@@ -34,9 +34,9 @@ export const contactData: ContactData[] = [
     label: "CV",
     iconPlain: "mdi:file-download",
     iconOriginal: "mdi:file-download",
-    link: "/Mark_Maraya_CV.pdf",
+    link: "/Mark_Maraya_CV.docx",
     hoverColor: "#f5f5eb",
     isDownload: true,
-    downloadFileName: "Mark_Maraya_CV.pdf",
+    downloadFileName: "Mark_Maraya_CV.docx",
   },
 ];
